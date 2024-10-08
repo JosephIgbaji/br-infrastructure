@@ -1,8 +1,7 @@
+import OfficeForm from "@/components/OfficeForm";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import OfficeForm from '../../components/OfficeForm';
 
 const page = () => {
-
   return (
     <section className="h-screen flex items-center justify-center">
       <Tabs defaultValue="office">
@@ -21,7 +20,6 @@ const page = () => {
         <TabsContent value="servers">List of all servers.</TabsContent>
         <TabsContent value="vms">List of All Virtual machines.</TabsContent>
       </Tabs>
-      
     </section>
   );
 };
