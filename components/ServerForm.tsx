@@ -7,11 +7,21 @@ import { Input } from "@/components/ui/input";
 
 const OfficeForm = () => {
   const [values, setValues] = useState({
-    deviceName: "",
+    deviceName: "Malexe",
     brand: "",
     serialNumber: "",
     issuedTo: "",
     issuedDate: Date(),
+    VM Name
+Storage 
+CPU
+Memory 
+Base OS
+Running OS
+IP Address
+Host IP
+Host Name
+
   });
 
   function onSubmit(e) {
@@ -22,37 +32,30 @@ const OfficeForm = () => {
   }
 
   return (
-    <section className="flex flex-col max-w-[600px] pt-5">
+    <section className="flex flex-col pt-5">
       <form onSubmit={onSubmit}>
-        <div className="w-[300px] lg:w-[500px] mb-4">
+        <div className="w-full mb-4">
           <Label>Device Name</Label>
           <Input
             value={values.deviceName}
             onChange={(e) => setValues({ ...values, deviceName: e.target.value })}
           />
         </div>
-        <div className="w-[300px] lg:w-[500px] mb-4">
+        <div className="w-full mb-4">
           <Label>Brand</Label>
           <Input
             value={values.brand}
             onChange={(e) => setValues({ ...values, brand: e.target.value })}
           />
         </div>
-        <div className="w-[300px] lg:w-[500px] mb-4">
-          <Label>Serial Number</Label>
-          <Input
-            value={values.serialNumber}
-            onChange={(e) => setValues({ ...values, serialNumber: e.target.value })}
-          />
-        </div>
-        <div className="w-[300px] lg:w-[500px] mb-4">
+        <div className="w-full mb-4">
           <Label>Issued To</Label>
           <Input
             value={values.issuedTo}
             onChange={(e) => setValues({ ...values, issuedTo: e.target.value })}
           />
         </div>
-        <div className="w-[300px] lg:w-[500px] mb-4">
+        <div className="w-full mb-4">
           <Label>Issued Date</Label>
           <Input
             type="Date"

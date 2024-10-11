@@ -15,7 +15,7 @@ const page = () => {
   }, []);
 
   return (
-    <div className="px-20">
+    <div className="pl-32 lg:pl-20 pr-20">
       <MyTable />
     </div>
   );
