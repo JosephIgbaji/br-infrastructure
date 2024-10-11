@@ -260,8 +260,8 @@ export default function MyTable() {
   return (
     <div className="min-w-[300px] sm:w-auto lg:w-full">
       <Tabs defaultValue="office">
-        <div className="w-full flex items-center justify-center">
-          <TabsList className="min-w-[300px] mt-20">
+        <div className="w-full flex justify-center">
+          <TabsList className="min-w-[300px] mt-4">
             <TabsTrigger value="office">Office</TabsTrigger>
             <TabsTrigger value="servers">Servers</TabsTrigger>
             <TabsTrigger value="vms">Virtual Machines</TabsTrigger>
@@ -273,7 +273,7 @@ export default function MyTable() {
         <TabsContent value="vms">List of All Virtual machines.</TabsContent>
       </Tabs>
 
-      <div className="flex items-center py-4">
+      <div className="flex py-4">
         <Input
           placeholder="Filter names..."
           value={(table.getColumn("name")?.getFilterValue() as string) ?? ""}
