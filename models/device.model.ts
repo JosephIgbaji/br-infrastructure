@@ -1,6 +1,6 @@
 import mongoose from "mongoose"
 
-const vmSchema = new mongoose.Schema({
+const deviceSchema = new mongoose.Schema({
     deviceName: String,
     brand: String,
     serialNumber: String,
@@ -8,6 +8,6 @@ const vmSchema = new mongoose.Schema({
     issuedDate: Date
 }, {timestamps: true})
 
-const VirtualMachine = mongoose.model("VirtualMachine", vmSchema);
+const Device = mongoose.model("Device", deviceSchema);
 
-export default VirtualMachine;
+export default Device;

@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 
+
 const OfficeForm = () => {
   const [values, setValues] = useState({
     deviceName: "",
@@ -14,11 +15,17 @@ const OfficeForm = () => {
     issuedDate: Date(),
   });
 
-  function onSubmit(e) {
+  async function onSubmit(e) {
     e.preventDefault();
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
     console.log(values);
+    const res = await fetch("/api/devices", {
+      method: "POST",
+      body: JSON.stringify(values),
+    })
+
+
   }
 
   return (
